@@ -1,13 +1,23 @@
 import React from 'react'
 
-function SearchInputs() {
+function SearchInputs({startDate, setStartDate, endDate, setEndDate}) {
   return (
     <div>
         <label htmlFor="startDate">Start Date :
-            <input type="date" id="startDate" name="startDate" />
+            <input 
+              type="date" 
+              id="startDate" 
+              name="startDate" 
+              value={startDate}
+              onChange={(e) => setStartDate(e.target.value)}/>
         </label>
         <label htmlFor="endDate">End Date :
-            <input type="date" id="endDate" name="endDate" />
+            <input 
+              type="date" 
+              id="endDate" 
+              name="endDate" 
+              value={endDate}
+              onChange={(e) => setEndDate(e.target.value)}/>
         </label>
     </div>
   )
