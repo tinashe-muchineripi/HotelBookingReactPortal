@@ -1,6 +1,27 @@
 import React from 'react'
+import { NavLink } from 'react-router'
 
-function RoomDescriptionTable({ room }) {
+function RoomDescriptionTable({ rooms, startDate, endDate }) {
+    let roomDescription = rooms.map((room) => 
+        <tr key={room.id}>
+                <td>
+                    <h3>{room.title}</h3>
+                    <p>{room.description}</p>
+                </td>
+                <td>{room.price}</td>
+                <td>
+                    <NavLink 
+                        to="book"
+                        state={{
+                            room: room.id,
+                            startDate: startDate,
+                            endDate: endDate
+                        }}>
+                     book 
+                    </NavLink>
+                </td>
+            </tr>
+            )
   return (
     <table>
         <thead>
@@ -11,16 +32,7 @@ function RoomDescriptionTable({ room }) {
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>
-                    <h3>{room.roomType}</h3>
-                    <p>{room.description}</p>
-                </td>
-                <td>{room.price}</td>
-                <td>
-                    <button> book </button>
-                </td>
-            </tr>
+           {roomDescription}
         </tbody>
     </table>
   )

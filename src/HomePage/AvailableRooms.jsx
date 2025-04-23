@@ -1,10 +1,11 @@
 import React from 'react'
+import RoomDescriptionTable from './RoomDescriptionTable'
 
-function AvailableRooms() {
+function AvailableRooms({rooms, startDate, endDate}) {
   return (
     <>
         <h1>Available Rooms</h1>
-        <RoomDescriptionTable room={room}/>
+        <RoomDescriptionTable rooms={rooms} startDate={startDate} endDate={endDate} />
     </>
   )
 }
