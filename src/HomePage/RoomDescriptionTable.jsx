@@ -28,7 +28,7 @@ function RoomDescriptionTable({ rooms, startDate, endDate }) {
             <tr>
                 <th>Room Description</th>
                 <th>Price</th>
-                <th>Booking Info</th>
+                <th>Book</th>
             </tr>
         </thead>
         <tbody>

@@ -11,7 +11,7 @@ function Book() {
     const {state} = useLocation();
     console.log(state)
   return (
-    <form action="">
+    <form action="" className='booking-form'>
         <label htmlFor="firstName">
             First Name : <input 
                             type="text" 

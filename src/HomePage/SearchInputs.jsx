@@ -2,7 +2,7 @@ import React from 'react'
 
 function SearchInputs({startDate, setStartDate, endDate, setEndDate}) {
   return (
-    <div>
+    <div className='search-inputs'>
         <label htmlFor="startDate">Start Date :
             <input 
               type="date" 

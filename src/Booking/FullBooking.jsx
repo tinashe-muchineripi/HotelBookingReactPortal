@@ -3,9 +3,9 @@ import { Outlet } from 'react-router'
 
 function FullBooking() {
   return (
-    <>
+    <div className='full-booking'>
         <Outlet />
-    </>
+    </div>
   )
 }
 

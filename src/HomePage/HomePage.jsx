@@ -44,7 +44,7 @@ function HomePage() {
   }
   
   return (
-    <>
+    <div className="home-page">
         <SearchInputs
           startDate={startDate}
           setStartDate={setStartDate}
@@ -53,7 +53,7 @@ function HomePage() {
         />
         <button type="submit" onClick={handleSubmit}>Search Available Rooms</button>
         <AvailableRooms rooms={rooms} startDate={startDate} endDate={endDate} /> 
-    </>
+    </div>
   )
 }
 
