@@ -33,16 +33,19 @@ function HomePage() {
 
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
+  const [availableRooms, setAvailableRooms] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    //const response = await fetch(`https://hotelbooking-f8gwf6c7e6c3h3bv.uksouth-01.azurewebsites.net/
-     // api/Room?startDate=${startDate}&endDate=${endDate}`);
+    const response = await fetch(`https://hotelbooking-f8gwf6c7e6c3h3bv.uksouth-01.azurewebsites.net/
+     api/Room?startDate=${startDate}&endDate=${endDate}`);
 
-    //const data = await response.json();
+    const data = await response.json();
+    setAvailableRooms(data);
   }
   
+  console.log(availableRooms);
   return (
     <div className="home-page">
         <SearchInputs
